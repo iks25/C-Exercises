@@ -1,0 +1,13 @@
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.exe
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.deps.json
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.runtimeconfig.json
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.runtimeconfig.dev.json
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.dll
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\bin\Debug\netcoreapp3.1\ConsoleAppBasics.pdb
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.csprojAssemblyReference.cache
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.AssemblyInfoInputs.cache
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.AssemblyInfo.cs
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.dll
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.pdb
+C:\Users\Igor\Desktop\my code\c#\exercises\CShaprEexercises\ConsoleAppBasics\obj\Debug\netcoreapp3.1\ConsoleAppBasics.genruntimeconfig.cache
