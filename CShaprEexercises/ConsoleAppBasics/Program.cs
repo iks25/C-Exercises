@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            ControlFlowExercises1.AskAboutNumber();
+            ControlFlowExercises1.BiggerNumber();
 
         }
     }

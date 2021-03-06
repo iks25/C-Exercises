@@ -6,6 +6,7 @@ namespace ConsoleAppBasics
     {
         class ControlFlowExercises1
         {
+
             /// <summary>
             /// exerscise1 from exercises1
             /// </summary>
@@ -39,6 +40,35 @@ namespace ConsoleAppBasics
             {
                 Console.WriteLine("Valid");
             }
+
+            public static void BiggerNumber()
+            {
+
+
+                try
+                {
+                    Console.WriteLine("enter first number");
+                    var input = Console.ReadLine();
+                    int number1 = Convert.ToInt32(input);
+
+                    Console.WriteLine("enter second number");
+                    var input2 = Console.ReadLine();
+                    int number2 = Convert.ToInt32(input);
+
+
+                    int biggerNumber = (number1 > number2) ? number1 : number2;
+                    Console.WriteLine("biger number is {0}", biggerNumber);
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("you didn't enter number");
+                }
+
+            }
+
+
 
 
         }
