@@ -4,11 +4,11 @@ namespace ConsoleAppBasics
 {
     partial class Program
     {
-        class ControlFlowExercises1
+        class ConditionalsSolution
         {
 
             /// <summary>
-            /// exerscise1 from exercises1
+            /// exerscise:1
             /// </summary>
             public static void AskAboutNumber()
             {
@@ -41,6 +41,9 @@ namespace ConsoleAppBasics
                 Console.WriteLine("Valid");
             }
 
+            /// <summary>
+            /// exercise: 2
+            /// </summary>
             public static void BiggerNumber()
             {
 
@@ -68,7 +71,37 @@ namespace ConsoleAppBasics
 
             }
 
+            /// <summary>
+            /// exercise:3
+            /// </summary>
+            public static void LandscapeOrPortrait()
+            {
 
+                try
+                {
+
+                    Console.WriteLine("enter height");
+                    int height = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("enter width");
+                    int width = Convert.ToInt32(Console.ReadLine());
+
+                    if (width > height)
+                    {
+                        Console.WriteLine("the image is landscape");
+                    }
+                    else
+                    {
+                        Console.WriteLine("the image is portrait");
+
+                    }
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("you should enter number");
+                }
+            }
 
 
         }
