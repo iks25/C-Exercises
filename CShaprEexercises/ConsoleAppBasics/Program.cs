@@ -7,7 +7,7 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            LoopsSolution.NumberOrOkProgram();
+            LoopsSolution.GuessNumberProgram();
         }
     }
 }
