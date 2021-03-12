@@ -1,4 +1,6 @@
-﻿using ConsoleAppBasics.ControlFlow;
+﻿using ConsoleAppBasics.classes;
+using ConsoleAppBasics.ControlFlow;
+using System;
 
 namespace ConsoleAppBasics
 {
@@ -7,7 +9,17 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            LoopsSolution.GuessNumberProgram();
+            var stopWatch = new StopWatch();
+
+            stopWatch.Start();
+            System.Threading.Thread.Sleep(1000);
+            stopWatch.Stop();
+            stopWatch.Start();
+            stopWatch.Stop();
+
+            System.Console.WriteLine(stopWatch.getDuration());
         }
+
+
     }
 }
