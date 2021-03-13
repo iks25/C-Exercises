@@ -161,7 +161,67 @@ namespace ConsoleAppBasics.ControlFlow
             Console.WriteLine("Sorry You Lost, that number was {0}", randomNumber);
 
         }
+        /// <summary>
+        /// exerscise 5
+        /// </summary>
+        public static void FindTheMaximumProgram()
+        {
+            Console.WriteLine("please enter numbers separated by comma");
 
+            var input = Console.ReadLine();
+            List<int> numbers;
 
+            if (String.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Sorry you enter epmpty string");
+                return;
+            }
+
+            try
+            {
+                numbers = ConvertInputToListOfNumbers(input);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("you did not pass numbers separeated by comma");
+                return;
+            }
+
+            int maxNumber = GetMaximumNumber(numbers);
+
+            Console.WriteLine("maximum of the numbers is {0}", maxNumber);
+        }
+
+        private static int GetMaximumNumber(List<int> numbers)
+        {
+            if (numbers == null || numbers.Count == 0)
+            {
+                throw (new ArgumentException("number can not be null or empty"));
+            }
+
+            int maxNumber = numbers[0];
+
+            for (int i = 1; i < numbers.Count; i++)
+            {
+                if (maxNumber < i)
+                    maxNumber = i;
+            }
+            return maxNumber;
+        }
+
+        private static List<int> ConvertInputToListOfNumbers(String input)
+        {
+            var result = new List<int>();
+
+            var numbersString = input.Split(',');
+
+            foreach (var item in numbersString)
+            {
+                var number = Convert.ToInt32(item);
+                result.Add(number);
+            }
+
+            return result;
+        }
     }
 }

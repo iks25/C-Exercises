@@ -8,7 +8,7 @@ namespace ConsoleAppBasics
     {
         static void Main(string[] args)
         {
-            ConditionalsSolution.SpeedCameraProgram();
+            LoopsSolution.FindTheMaximumProgram();
         }
 
 
