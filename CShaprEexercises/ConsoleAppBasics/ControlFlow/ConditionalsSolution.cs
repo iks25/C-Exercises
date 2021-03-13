@@ -104,6 +104,82 @@ namespace ConsoleAppBasics
             }
 
 
+            /// <summary>
+            /// exercise:4
+            /// </summary>
+            public static void SpeedCameraProgram()
+            {
+
+                Console.WriteLine("enter speed limit");
+                int speedLimit, carSpeed;
+                try
+                {
+                    speedLimit = ReadIntFromConsole();
+                }
+                catch
+                {
+                    Console.WriteLine("you should pass a number");
+                    return;
+                }
+
+                if (speedLimit <= 0)
+                {
+                    Console.WriteLine("speed Limit need be bigger then 0");
+                    return;
+                }
+
+                Console.WriteLine("please enter car speed");
+                try
+                {
+                    carSpeed = ReadIntFromConsole();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("car speed should be a number");
+                    return;
+
+                }
+                if (carSpeed <= 0)
+                {
+                    Console.WriteLine("car speed should be bigger then 0");
+                    return;
+                }
+
+                int demeritPiots = CountDemeritPoints(speedLimit, carSpeed);
+
+                if (demeritPiots == 0)
+                    Console.WriteLine("OK");
+                else
+                    if (demeritPiots <= 12)
+                    Console.WriteLine("you got {0} demerit points", demeritPiots);
+                else
+                    Console.WriteLine("License Suspended");
+
+            }
+
+            private static int CountDemeritPoints(int speedLimit, int carSpeed)
+            {
+                if (carSpeed <= speedLimit)
+                    return 0;
+
+                int speedExceeded = carSpeed - speedLimit;
+
+                int kmPerDemeritPoint = 5;
+                int result = speedExceeded / kmPerDemeritPoint;
+
+                return result;
+            }
+
+            private static int ReadIntFromConsole()
+            {
+
+                var input = Console.ReadLine();
+                var inputInt = Convert.ToInt32(input);
+                return inputInt;
+
+            }
+
+
         }
     }
 }

@@ -8,16 +8,7 @@ namespace ConsoleAppBasics
     {
         static void Main(string[] args)
         {
-
-            var stopWatch = new StopWatch();
-
-            stopWatch.Start();
-            System.Threading.Thread.Sleep(1000);
-            stopWatch.Stop();
-            stopWatch.Start();
-            stopWatch.Stop();
-
-            System.Console.WriteLine(stopWatch.getDuration());
+            ConditionalsSolution.SpeedCameraProgram();
         }
 
 
