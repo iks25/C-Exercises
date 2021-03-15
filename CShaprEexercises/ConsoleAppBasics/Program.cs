@@ -1,5 +1,6 @@
 ﻿using ConsoleAppBasics.classes;
 using ConsoleAppBasics.ControlFlow;
+using ConsoleAppBasics.WorkingWithText;
 using System;
 
 namespace ConsoleAppBasics
@@ -8,7 +9,9 @@ namespace ConsoleAppBasics
     {
         static void Main(string[] args)
         {
-            LoopsSolution.FindTheMaximumProgram();
+
+            var program = new ConsecutiveOrNot();
+            program.ShowOnConsole();
         }
 
 
