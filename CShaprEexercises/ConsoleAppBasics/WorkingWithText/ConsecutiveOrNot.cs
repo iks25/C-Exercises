@@ -4,7 +4,10 @@ using System.Linq;
 
 namespace ConsoleAppBasics.WorkingWithText
 {
-    public class ConsecutiveOrNot
+    /// <summary>
+    /// text exercise 1
+    /// </summary>
+    public class ConsecutiveOrNot : IConsolAplication
     {
 
         public void ShowOnConsole()

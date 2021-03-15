@@ -10,7 +10,7 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            var program = new ConsecutiveOrNot();
+            var program = new DuplicateProgram();
             program.ShowOnConsole();
         }
 

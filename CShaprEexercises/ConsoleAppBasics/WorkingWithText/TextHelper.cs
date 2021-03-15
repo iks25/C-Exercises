@@ -38,5 +38,24 @@ namespace ConsoleAppBasics.WorkingWithText
 
             return result;
         }
+
+
+        public static bool IsContainDuplicates(List<int> numbers)
+        {
+            if (numbers == null || numbers.Count == 0)
+            {
+                return false;
+            }
+
+            numbers.Sort();
+
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] == numbers[i + 1])
+                    return true;
+            }
+
+            return false;
+        }
     }
 }

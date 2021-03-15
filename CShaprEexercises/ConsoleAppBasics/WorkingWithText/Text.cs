@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppBasics.WorkingWithText
 {
-    class Text
+    public class NumbersHelper
     {
 
 

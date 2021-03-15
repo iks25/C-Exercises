@@ -7,7 +7,7 @@ using System.Text;
 namespace ConsoleAppBasics.WorkingWithText.Tests
 {
     [TestClass()]
-    public class TextConverterTests
+    public class TextHelperTests
     {
         [TestMethod()]
         public void ConvertStringToNumberListTest_textEmpty_ThrowExeption()
@@ -73,6 +73,33 @@ namespace ConsoleAppBasics.WorkingWithText.Tests
             var expectedNumbers = new List<int>() { 5 };
 
             CollectionAssert.AreEqual(expectedNumbers, result);
+        }
+
+        [TestMethod()]
+        public void IsContainDuplicatesTest_numbersIsEmpty_returnFalse()
+        {
+            var result = TextHelper.IsContainDuplicates(new List<int>());
+
+            Assert.IsFalse(result);
+        }
+
+
+        [TestMethod()]
+        public void IsContainDuplicatesTest_numbersContainDuplicate_returnTrue()
+        {
+            var numbers = new List<int>() { 4, 2, 4, 8 };
+            var result = TextHelper.IsContainDuplicates(numbers);
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod()]
+        public void IsContainDuplicatesTest_numbersNotContainDuplicate_returnFalse()
+        {
+            var numbers = new List<int>() { 4, 2, 14, 8 };
+            var result = TextHelper.IsContainDuplicates(numbers);
+
+            Assert.IsFalse(result);
         }
     }
 }
