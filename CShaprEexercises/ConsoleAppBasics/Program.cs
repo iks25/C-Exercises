@@ -10,7 +10,7 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            var program = new DuplicateProgram();
+            var program = new ValidTimeProgram();
             program.ShowOnConsole();
         }
 

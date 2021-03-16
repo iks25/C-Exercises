@@ -101,5 +101,68 @@ namespace ConsoleAppBasics.WorkingWithText.Tests
 
             Assert.IsFalse(result);
         }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textNull_returnFalse()
+        {
+            var result = TextHelper.IsValidTime(null);
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textIsEmpty_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textIsInvalitFormat_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("2018:12:1:24:32");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textIsToBig_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("11:20:32");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textIsValid_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("11:20");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textHasToBigMinuts_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("11:90");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textHasToBigHours_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("25:30");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textHasToSmalMinuts_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("11:-43");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod()]
+        public void IsValidTimeTest_textHasToSmalHours_returnFalse()
+        {
+            var result = TextHelper.IsValidTime("-11:43");
+            Assert.IsFalse(result);
+        }
     }
 }

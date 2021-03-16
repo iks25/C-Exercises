@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppBasics.WorkingWithText
 {
-    class DuplicateProgram : IConsolAplication
+    class DuplicateProgram : IConsoleAplication
     {
         public void ShowOnConsole()
         {

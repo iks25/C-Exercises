@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppBasics
 {
-    interface IConsolAplication
+    interface IConsoleAplication
     {
         public void ShowOnConsole();
     }

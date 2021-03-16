@@ -39,6 +39,47 @@ namespace ConsoleAppBasics.WorkingWithText
             return result;
         }
 
+        /// <summary>
+        /// return true if only if time is in valid format dd:dd 
+        /// (e.g. 19:00)
+        /// </summary>
+        public static bool IsValidTime(string text)
+        {
+            if (text == null || String.IsNullOrWhiteSpace(text))
+            {
+                return false;
+            }
+
+            var hoursMinuts = text.Split(":");
+
+            if (hoursMinuts.Length != 2)
+            {
+                return false;
+            }
+            int timeHour, timeMinut;
+            try
+            {
+                timeHour = Convert.ToInt32(hoursMinuts[0]);
+                timeMinut = Convert.ToInt32(hoursMinuts[1]);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            if (timeHour < 0 || timeHour > 23)
+            {
+                return false;
+            }
+
+            if (timeMinut < 0 || timeMinut > 59)
+            {
+                return false;
+            }
+
+
+            return true;
+        }
 
         public static bool IsContainDuplicates(List<int> numbers)
         {

@@ -7,7 +7,7 @@ namespace ConsoleAppBasics.WorkingWithText
     /// <summary>
     /// text exercise 1
     /// </summary>
-    public class ConsecutiveOrNot : IConsolAplication
+    public class ConsecutiveOrNot : IConsoleAplication
     {
 
         public void ShowOnConsole()
