@@ -10,7 +10,7 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            var program = new ValidTimeProgram();
+            var program = new PascalCaseProgram();
             program.ShowOnConsole();
         }
 

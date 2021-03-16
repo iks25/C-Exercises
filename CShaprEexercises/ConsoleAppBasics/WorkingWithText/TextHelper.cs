@@ -40,6 +40,35 @@ namespace ConsoleAppBasics.WorkingWithText
         }
 
         /// <summary>
+        ///  "NUMBER OF STUDENTS" convert to "NumberOfStudents" 
+        /// </summary>
+        public static string ConvertToPascalCase(string text)
+        {
+            if (text.Trim().Equals(""))
+                return "";
+
+            var result = new List<string>();
+            var words = text.Split(" ");
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                var newWordString = words[i].Trim().ToLower();
+
+
+                var newWord = newWordString.ToCharArray();
+                newWord[0] = Char.ToUpper(newWord[0]);
+
+                string convertedWord = new String(newWord);
+
+                result.Add(convertedWord);
+
+            }
+
+            return String.Join("", result);
+
+        }
+
+        /// <summary>
         /// return true if only if time is in valid format dd:dd 
         /// (e.g. 19:00)
         /// </summary>

@@ -164,5 +164,48 @@ namespace ConsoleAppBasics.WorkingWithText.Tests
             var result = TextHelper.IsValidTime("-11:43");
             Assert.IsFalse(result);
         }
+
+        [TestMethod()]
+        public void ConvertToPascalCaseTest_textEmpty_returnEmptyString()
+        {
+            var pascalText = TextHelper.ConvertToPascalCase("");
+            var result = StringAssert.Equals(pascalText, "");
+
+
+            Assert.IsTrue(result);
+
+        }
+
+        [TestMethod()]
+        public void ConvertToPascalCaseTest_textWhiteSpace_returnEmptyString()
+        {
+            var pascalText = TextHelper.ConvertToPascalCase("    ");
+            var result = StringAssert.Equals(pascalText, "");
+
+
+            Assert.IsTrue(result);
+
+
+        }
+
+
+        [TestMethod()]
+        public void ConvertToPascalCaseTest_textOneWord_returnWordStartedByCapitalLeater()
+        {
+            var pascalText = TextHelper.ConvertToPascalCase("igor");
+            var result = StringAssert.Equals(pascalText, "Igor");
+
+
+            Assert.IsTrue(result);
+        }
+
+        public void ConvertToPascalCaseTest_textWordSeparatedBySpace_returnTextInPascaleCaseFormat()
+        {
+            var pascalText = TextHelper.ConvertToPascalCase("igor KoZeRski SEWeryn");
+            var result = StringAssert.Equals(pascalText, "IgorKozerskiSeweryn");
+
+
+            Assert.IsTrue(result);
+        }
     }
 }
