@@ -207,5 +207,24 @@ namespace ConsoleAppBasics.WorkingWithText.Tests
 
             Assert.IsTrue(result);
         }
+
+        [TestMethod()]
+        public void CountVowelsTest_textEmptyWord_return0()
+        {
+            string text = "";
+            var result = TextHelper.CountVowels(text);
+
+            Assert.AreEqual(result, 0);
+        }
+
+
+        [TestMethod()]
+        public void CountVowelsTest()
+        {
+            string text = "Igorek";
+            var result = TextHelper.CountVowels(text);
+
+            Assert.AreEqual(result, 3);
+        }
     }
 }

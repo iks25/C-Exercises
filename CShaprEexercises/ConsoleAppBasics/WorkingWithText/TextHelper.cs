@@ -127,5 +127,23 @@ namespace ConsoleAppBasics.WorkingWithText
 
             return false;
         }
+
+        public static int CountVowels(string text)
+        {
+            List<char> vowels = new List<char>()
+            { 'a', 'A', 'e', 'E', 'o', 'O', 'u', 'U', 'i', 'I' };
+
+            int numberOfVowels = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                foreach (var vowel in vowels)
+                {
+                    if (text[i] == vowel)
+                        numberOfVowels++;
+                }
+            }
+
+            return numberOfVowels;
+        }
     }
 }
