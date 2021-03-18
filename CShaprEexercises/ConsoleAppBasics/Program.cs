@@ -1,4 +1,5 @@
-﻿using ConsoleAppBasics.classes;
+﻿using ConsoleAppBasics.ArrayAndLists;
+using ConsoleAppBasics.classes;
 using ConsoleAppBasics.ControlFlow;
 using ConsoleAppBasics.WorkingWithText;
 using System;
@@ -10,8 +11,9 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-            var program = new VowelsCounterProgram();
-            program.ShowOnConsole();
+
+            var solutionRunner = new ArrayAndListSolutionRunner();
+            solutionRunner.runSolution(2);
         }
 
 
