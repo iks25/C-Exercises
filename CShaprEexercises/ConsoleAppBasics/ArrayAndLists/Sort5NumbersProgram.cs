@@ -10,22 +10,11 @@ namespace ConsoleAppBasics.ArrayAndLists
         {
             Console.WriteLine("please enter 5 numbers");
 
-            List<string> inputs = GetInputsFromUser(5);
+            List<int> inputs = GetDiffrentNumbersFromUser(5);
 
-            List<int> inputsInts;
-            try
-            {
-                inputsInts = ConvertListStringToListNumbers(inputs);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("you should enter only numbers");
-                return;
-            }
+            inputs.Sort();
 
-            inputsInts.Sort();
-
-            ShowResults(inputsInts);
+            ShowResults(inputs);
 
         }
 
@@ -38,39 +27,44 @@ namespace ConsoleAppBasics.ArrayAndLists
             }
         }
 
-        private List<int> ConvertListStringToListNumbers(List<string> listOfNumbers)
-        {
-            if (listOfNumbers == null)
-                return null;
-            if (listOfNumbers.Count == 0)
-                return new List<int>();
 
-            var result = new List<int>();
-            foreach (var item in listOfNumbers)
+
+        private List<int> GetDiffrentNumbersFromUser(int amountOfNumbers)
+        {
+            List<int> numbers = new List<int>();
+
+            if (amountOfNumbers < 0)
+                throw new ArgumentOutOfRangeException
+                    ("amount Numbers ca not be smaller then 0");
+
+            while (numbers.Count < amountOfNumbers)
             {
+
+                Console.WriteLine("plese enter a number");
+                var input = Console.ReadLine();
+                int inputNumber;
                 try
                 {
-                    var number = Convert.ToInt32(item);
-                    result.Add(number);
+                    inputNumber = Convert.ToInt32(input);
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException("all position in listOfNumbers should be number");
+                    Console.WriteLine("this is not a number, try again");
+                    continue;
                 }
-            }
 
-            return result;
-        }
+                if (numbers.Contains(inputNumber))
+                {
+                    Console.WriteLine
+                        ("sorry, number has been previously entered, try again");
+                    continue;
+                }
 
-        private List<string> GetInputsFromUser(int numbersOfInputs)
-        {
-            var inputs = new List<string>();
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("please enter a number");
-                inputs.Add(Console.ReadLine());
-            }
-            return inputs;
+                numbers.Add(inputNumber);
+
+            };
+            return numbers;
+
         }
     }
 }
