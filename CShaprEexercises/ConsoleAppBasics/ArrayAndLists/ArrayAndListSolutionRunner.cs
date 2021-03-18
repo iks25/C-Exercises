@@ -14,6 +14,11 @@ namespace ConsoleAppBasics.ArrayAndLists
                 case 1:
                     program = new WhoLikeYourPostProgram();
                     break;
+                case 2:
+                    program = new ReverseNameProgram();
+                    break;
+
+
 
                 default:
                     Console.WriteLine("that exercise is not implemented");

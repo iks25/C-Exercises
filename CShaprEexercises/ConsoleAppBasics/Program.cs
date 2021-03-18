@@ -11,7 +11,6 @@ namespace ConsoleAppBasics
         static void Main(string[] args)
         {
 
-
             var solutionRunner = new ArrayAndListSolutionRunner();
             solutionRunner.runSolution(2);
         }
