@@ -17,6 +17,9 @@ namespace ConsoleAppBasics.ArrayAndLists
                 case 2:
                     program = new ReverseNameProgram();
                     break;
+                case 3:
+                    program = new Sort5NumbersProgram();
+                    break;
 
 
 
