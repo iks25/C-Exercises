@@ -23,8 +23,9 @@ namespace ConsoleAppBasics.ArrayAndLists
                 case 4:
                     program = new UniqueNumbersProgram();
                     break;
-
-
+                case 5:
+                    program = new The3SmallestNumbersProgram();
+                    break;
 
                 default:
                     Console.WriteLine("that exercise is not implemented");

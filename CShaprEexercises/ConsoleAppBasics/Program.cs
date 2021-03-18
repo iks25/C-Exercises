@@ -12,7 +12,7 @@ namespace ConsoleAppBasics
         {
 
             var solutionRunner = new ArrayAndListSolutionRunner();
-            solutionRunner.runSolution(4);
+            solutionRunner.runSolution(5);
         }
 
 
