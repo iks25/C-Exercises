@@ -35,5 +35,51 @@ namespace ConsoleAppBasics.ArrayAndLists.Tests
 
             Assert.AreEqual(result, "rogi");
         }
+
+        [TestMethod()]
+        public void ConvertUniqueNumbersListTest_listNull_returnEmptyArray()
+        {
+            var result = ArrayAndListHelper.ConvertUniqueNumbersList(null);
+
+            Assert.AreEqual(result.Count, 0);
+        }
+
+        [TestMethod()]
+        public void ConvertUniqueNumbersListTest_listEmpty_returnEmptyArray()
+        {
+            var list = new List<string>();
+            var result = ArrayAndListHelper.ConvertUniqueNumbersList(list);
+
+            Assert.AreEqual(result.Count, 0);
+        }
+
+        [TestMethod()]
+        public void ConvertUniqueNumbersListTest_listDoNotContainNumbers_returnEmptyArray()
+        {
+            var list = new List<string>() { "fds", "igor", "kozerski" };
+            var result = ArrayAndListHelper.ConvertUniqueNumbersList(list);
+
+            Assert.AreEqual(result.Count, 0);
+        }
+
+        [TestMethod()]
+        public void ConvertUniqueNumbersListTest_listContainNumbers_returnEmptyArray()
+        {
+            var list = new List<string>() { "5", "43", "kozerski", "1" };
+            var result = ArrayAndListHelper.ConvertUniqueNumbersList(list);
+
+            Assert.AreEqual(result.Count, 3);
+            CollectionAssert.AreEqual(result, new List<int>() { 5, 43, 1 });
+        }
+
+        [TestMethod()]
+        public void ConvertUniqueNumbersListTest_listContainNumbersWithRepetition_returnEmptyArray()
+        {
+            var list = new List<string>() { "5", "43", "kozerski", "1", "43", "igor" };
+            var result = ArrayAndListHelper.ConvertUniqueNumbersList(list);
+
+            Assert.AreEqual(result.Count, 3);
+            CollectionAssert.AreEqual(result, new List<int>() { 5, 43, 1 });
+        }
     }
 }

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ConsoleAppBasics.ArrayAndLists
 {
+    /// <summary>
+    /// exercise 4 arrays and list
+    /// </summary>
     class Sort5NumbersProgram : IConsoleAplication
     {
         public void ShowOnConsole()
@@ -24,6 +27,7 @@ namespace ConsoleAppBasics.ArrayAndLists
             foreach (var item in inputsInts)
             {
                 Console.Write(item + " ");
+
             }
         }
 
